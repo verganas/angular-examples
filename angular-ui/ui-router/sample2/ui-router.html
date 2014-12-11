@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!--
+    http://txt.fliglio.com/2013/05/angularjs-state-management-with-ui-router/
+-->
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner"><div class="container">
+            <ul class="nav">
+                <li ng-class="{ active: $state.includes('home') }"><a href="#/">Home</a></li>
+                <li ng-class="{ active: $state.includes('settings') }"><a href="#/settings">Settings</a></li>
+            </ul>
+            <p class="navbar-text" ui-view="hint"></p>
+        </div></div>
+    </div>
+    <div class="container" style="margin-top:60px" ui-view ></div>
+    <hr>
+    <pre>
+        $state = {{$state.current.name}}
+        $stateParams = {{$stateParams}}
+    </pre>
+
+    <script src="http://code.angularjs.org/1.2.9/angular.js"></script>
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="myApp.js"></script>
+    <script type="tem" id="">
+        <div class="hero-unit">
+        <h1>Allo, Allo!</h1>
+        <ul><li ng-repeat="thing in awesomeThings">{{thing}}</li></ul>
+        <p>installed. Check out <a href="#/settings">settings</a> to see some cool stuff</p></div>
+        </div>
+    </script>
+</body>

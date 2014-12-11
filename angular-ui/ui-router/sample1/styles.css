@@ -1,0 +1,18 @@
+ul, ol, dl {
+    list-style-type: none;
+}
+.red {
+    background: red;
+    color: white;
+}
+.green {
+    background: green;
+    color: yellow;
+}
+.blue {
+    background: blue;
+    color: white;
+}
+.content {
+    height: 100%;
+}
