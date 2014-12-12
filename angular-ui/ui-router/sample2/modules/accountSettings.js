@@ -1,6 +1,6 @@
 'use strict';
 
-var accountSettings = angular.module('accountSettings', ['ui.router'])
+angular.module('accountSettings', ['ui.router'])
     .config(['$stateProvider', '$urlRouterProvider',
         function ($stateProvider, $urlRouterProvider) {
 
