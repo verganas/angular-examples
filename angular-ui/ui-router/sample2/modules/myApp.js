@@ -14,6 +14,9 @@ angular.module('myApp', ['ui.router', 'accountSettings'])
             $stateProvider.state(home);
         }])
     .run(['$rootScope', '$state', '$stateParams', function ($rootScope, $state, $stateParams) {
+        // Save state and stateParams in rootScope so they can be referenced
+        // from any descendant scope without dependency injection
+        // Note: This is hacky.
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
         $state.transitionTo('home');

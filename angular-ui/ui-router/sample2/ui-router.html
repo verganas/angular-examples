@@ -4,16 +4,16 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <!--
     http://txt.fliglio.com/2013/05/angularjs-state-management-with-ui-router/
 -->
-
 <body>
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
             <ul class="nav">
+                <!-- $state is set as $rootScope property inside run
+                    registered function of myApp -->
                 <li data-ng-class="{ active: $state.includes('home') }">
                     <a href="#/">Home</a>
                 </li>
