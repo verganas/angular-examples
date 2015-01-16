@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>tst ui</title>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css"
+          rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -30,15 +31,21 @@
 
 <body ng-app="myApp">
 <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner"><div class="container">
-        <ul class="nav">
-            <li ng-class="{ active: $state.includes('home') }"><a href="#/">Home</a></li>
-            <li ng-class="{ active: $state.includes('settings') }"><a href="#/settings">Settings</a></li>
-        </ul>
-        <p class="navbar-text" ui-view="hint"></p>
-    </div></div>
+    <div class="navbar-inner">
+        <div class="container">
+            <ul class="nav">
+                <li ng-class="{ active: $state.includes('home') }">
+                    <a href="#/">Home</a>
+                </li>
+                <li ng-class="{ active: $state.includes('settings') }">
+                    <a href="#/settings">Settings</a>
+                </li>
+            </ul>
+            <p class="navbar-text" ui-view="hint"></p>
+        </div>
+    </div>
 </div>
-<div class="container" style="margin-top:60px" ui-view ></div>
+<div class="container" style="margin-top:60px" ui-view></div>
 <hr>
 		<pre>
 			$state = {{$state.current.name}}
